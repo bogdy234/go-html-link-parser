@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"log"
 	"os"
 	"strings"
@@ -11,7 +10,7 @@ import (
 )
 
 func readHtmlFromFile(fileName string) (string, error) {
-	bs, err := ioutil.ReadFile(fileName)
+	bs, err := os.ReadFile(fileName)
 
 	if err != nil {
 		return "", err
